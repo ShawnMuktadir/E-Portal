@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dim3"
+    android:elevation="@dimen/dim3"
+    android:padding="@dimen/dim3"
+    app:ignore="NamespaceTypo"
+    card_view:cardCornerRadius="@dimen/dim3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim5"
+            android:padding="@dimen/dim3">
+
+            <TextView
+                android:id="@+id/textViewEmployeeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employee Name"
+                android:textSize="@dimen/dimTex15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewEmployeeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewEmployeeName"
+                android:text="Employee Id : 02-1827"
+                android:textSize="@dimen/dimTex12"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textViewTodaysDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:text="2020-05-10"
+                android:textSize="@dimen/dimTex12"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textViewAttendenceStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTodaysDate"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="end"
+                android:text="Late in / Early out"
+                android:textSize="@dimen/dimTex12"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners_orange"
+                android:layout_margin="@dimen/dim5"
+                android:padding="@dimen/dim3"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim5"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ST"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewDayEmployeeStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day off"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutInTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim5"
+                    android:layout_toRightOf="@+id/linearLayoutStatus"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="In Time"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewDayEmployeeInTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13:27:48"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutOutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim5"
+                    android:layout_toRightOf="@+id/linearLayoutInTime"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Out Time"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewDayEmployeeOutTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16:27:48"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutWorkingHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim5"
+                    android:layout_toRightOf="@+id/linearLayoutOutTime"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WH"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewDayEmployeeWorkingHour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:30"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutWorkingShift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim5"
+                    android:layout_toRightOf="@+id/linearLayoutWorkingHour"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shift"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewDayEmployeeWorkingShift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Day Off"
+                        android:textSize="@dimen/dimTex15"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

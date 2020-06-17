@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dim3"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:elevation="@dimen/dim3"
+    android:focusable="true"
+    android:padding="@dimen/dim3"
+    app:ignore="NamespaceTypo"
+    card_view:cardCornerRadius="@dimen/dim5">
+
+    <LinearLayout
+        android:id="@+id/rowFG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/dim70"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dim2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleImageViewNotification"
+                android:layout_width="@dimen/dim70"
+                android:layout_height="@dimen/dim70"
+                android:layout_centerInParent="true"
+                android:src="@drawable/camera_icon"
+                android:visibility="visible"
+                card_view:civ_border_color="@color/gray_update"
+                card_view:civ_border_width="@dimen/dim2"
+                card_view:civ_circle_background_color="@color/transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim5"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:padding="@dimen/dim2">
+
+            <LinearLayout
+                android:id="@+id/linearLayoutParkingAreaName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/textViewEmployeeName"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:padding="@dimen/dim2"
+                        android:text="@string/employee_name"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textViewNotificationDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:gravity="end"
+                        android:padding="@dimen/dim2"
+                        android:text="@string/time"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewEmployeeDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:padding="@dimen/dim2"
+                    android:text="@string/designation"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/textViewOfficeMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:padding="@dimen/dim2"
+                    android:text="@string/office_message"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
